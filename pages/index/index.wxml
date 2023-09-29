@@ -1,0 +1,30 @@
+<!--index.wxml-->
+<view class="body">
+  <text class="h1">喝水记录本</text>
+  <text class="h3">今日目标: 3升 </text>
+
+  <view class="cup">
+    <view class="remained" style="height: {{remainedH}}px">
+      <text class="span">{{isRemained ? liters : ''}}</text>
+      <text class="small">{{isRemained ? '剩余' : ''}}</text>
+    </view>
+
+    <view class="percentage" style="{{percentageH}}">{{isPercentage ? percentage : ''}}</view>
+  </view>
+
+  <text class="text">请选择喝水的杯子</text>
+
+  <view class="cups">
+    <view class="cup cup-small" bindtap="cups" data-ml="700">700 ml</view>
+    <view class="cup cup-small" bindtap="cups" data-ml="400">400 ml</view>
+    <view class="cup cup-small" bindtap="cups" data-ml="600">600 ml</view>
+    <view class="cup cup-small" bindtap="cups" data-ml="500">500 ml</view>
+    <view class="cup cup-small" bindtap="cups" data-ml="50">50 ml</view>
+    <view class="cup cup-small" bindtap="cups" data-ml="100">100 ml</view>
+    <view class="cup cup-small" bindtap="cups" data-ml="150">150 ml</view>
+    <view class="cup cup-small" bindtap="cups" data-ml="300">300 ml</view>
+  </view>
+
+  <view class="cancle" bindtap="update">清空</view>
+</view>
+
